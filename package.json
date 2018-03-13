@@ -1,0 +1,27 @@
+{
+  "name": "employee-directory",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CWSites/employee-directory.git"
+  },
+  "author": "Matt Haff",
+  "devDependencies": {
+    "ajv": "^6.2.1",
+    "concurrently": "3.5.1",
+    "react-scripts": "1.1.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.3.0-alpha.1",
+    "react-dom": "^16.3.0-alpha.1",
+    "serve": "^6.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "watch": "concurrently --names \"webpack, npm run start\"",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  }
+}
