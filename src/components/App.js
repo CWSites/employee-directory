@@ -2,6 +2,7 @@ import React from 'react';
 
 // import components
 import Profile from './Profile';
+import Table from './Table';
 
 // import sample data
 import employees from '../data/sample';
@@ -24,9 +25,20 @@ class App extends React.Component {
 
   render() {
     return(
-      <section className="tiles">
-        <Profile state={this.state} />
-      </section>
+      <div className="app-wrapper">
+        <header>
+          <h1>Employee Directory</h1>
+          <button class="btn tile">Tile</button>
+          <button class="btn list">List</button>
+          <input type="text" class="filter" placeholder="Type here to filter" />
+        </header>
+        <section className="tiles">
+          <Profile state={this.state} />
+        </section>
+        <section className="list">
+          <Table state={this.state} />
+        </section>
+      </div>
     )
   }
 }

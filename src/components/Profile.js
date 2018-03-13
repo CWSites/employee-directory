@@ -11,7 +11,7 @@ class Profile extends React.Component {
 
     return (
       <div key={key} className="thumbnail">
-        <div className="picWrap">
+        <div className="picWrap" style={{backgroundImage: `url(${employee[key].hover})`}}>
           <img src={employee[key].pic} className="primary" />
         </div>
         <span className="name">{employee[key].first} {employee[key].last}</span>
