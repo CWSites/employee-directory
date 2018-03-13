@@ -24,10 +24,9 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>Employee Directory</h1>
+      <section className="tiles">
         <Profile state={this.state} />
-      </div>
+      </section>
     )
   }
 }
