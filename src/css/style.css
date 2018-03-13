@@ -33,204 +33,270 @@ h1 {
 textarea, input, :focus {
   outline-color: transparent;
   outline-style: none;
-  outline: none; }
+  outline: none;
+}
 
+/* HEADER STYLES */
 header {
   background: #2980b9;
   color: white;
   min-height: 90px;
   padding: 0 20px;
-  border-bottom: 10px solid #2c3e50; }
-  header h1 {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: normal;
-    line-height: 80px;
-    float: left; }
-  header button {
-    margin: 25px 0 0 10px;
-    text-transform: uppercase;
-    border: none;
-    background: #f39c12;
-    border-radius: 2px;
-    height: 30px;
-    padding: 5px 20px 3px;
-    float: right; }
-    header button:hover {
-      background: #e08e0b; }
-  header input {
-    height: 30px;
-    line-height: 30px;
-    margin: 25px 0 0;
-    padding: 3px 5px 2px;
-    font-size: 13px;
-    color: #2980b9;
-    width: 300px;
-    float: right;
-    border: none;
-    background: #1e5d87; }
-  header ::-webkit-input-placeholder {
-    color: #2980b9; }
-  header ::-moz-placeholder {
-    color: #2980b9; }
-  header :-ms-input-placeholder {
-    color: #2980b9; }
+  border-bottom: 10px solid #2c3e50;
+}
+header h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 80px;
+  float: left;
+}
+header button {
+  margin: 25px 0 0 10px;
+  text-transform: uppercase;
+  border: none;
+  background: #f39c12;
+  border-radius: 2px;
+  height: 30px;
+  padding: 5px 20px 3px;
+  float: right;
+}
+header button:hover {
+  background: #e08e0b;
+}
+header input {
+  height: 30px;
+  line-height: 30px;
+  margin: 25px 0 0;
+  padding: 3px 5px 2px;
+  font-size: 13px;
+  color: #2980b9;
+  width: 300px;
+  float: right;
+  border: none;
+  background: #1e5d87;
+}
+header ::-webkit-input-placeholder {
+  color: #2980b9;
+}
+header ::-moz-placeholder {
+  color: #2980b9;
+}
+header :-ms-input-placeholder {
+  color: #2980b9;
+}
 
+/* TILES STYLES */
 section.tiles {
   padding: 20px;
   overflow: auto;
-  text-align: center; }
-  section.tiles .thumbnail {
-    width: 160px;
-    padding: 10px;
-    background: #ddd;
-    display: inline-block;
-    text-align: center;
-    margin: 0 5px 10px;
-    border: 2px solid #ddd;
-    cursor: pointer; }
-    section.tiles .thumbnail:hover, section.tiles .thumbnail:focus {
-      background: #ededed;
-      border-color: #f39c12; }
-    section.tiles .thumbnail.new {
-      background: #fad9a3; }
-    section.tiles .thumbnail.small .name {
-      font-size: 12px; }
-    section.tiles .thumbnail.smaller .name {
-      font-size: 11px; }
-    section.tiles .thumbnail .picWrap {
-      border-radius: 50%;
-      overflow: hidden;
-      width: 100%;
-      height: 140px;
-      margin: 10px auto 25px;
-      box-shadow: 0 0 0 3px white;
-      background-size: 140px;
-      background-repeat: no-repeat;
-      background-position: center center; }
-      section.tiles .thumbnail .picWrap:hover img {
-        display: none; }
-      section.tiles .thumbnail .picWrap img {
-        width: 140px;
-        min-height: 140px;
-        margin-left: -2px; }
-    section.tiles .thumbnail .details {
-      opacity: 1;
-      transition: opacity 0.4s, height 0;
-      height: auto;
-      overflow: hidden; }
-      section.tiles .thumbnail .details.ng-hide {
-        opacity: 0;
-        transition: opacity 0.4s, height 0 0.4s;
-        height: 0;
-        display: block !important; }
-    section.tiles .thumbnail span {
-      font-size: 13px;
-      line-height: 1.5em;
-      display: block; }
-      section.tiles .thumbnail span.name {
-        font-size: 14px; }
-      section.tiles .thumbnail span.title {
-        font-size: 12px; }
-      section.tiles .thumbnail span.divider {
-        height: 10px; }
-      section.tiles .thumbnail span.extension {
-        display: inline; }
-      section.tiles .thumbnail span a {
-        color: #2980b9; }
+  text-align: center;
+}
+section.tiles .thumbnail {
+  width: 160px;
+  padding: 10px;
+  background: #ddd;
+  display: inline-block;
+  text-align: center;
+  margin: 0 5px 10px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+section.tiles .thumbnail:hover, section.tiles .thumbnail:focus {
+  background: #ededed;
+  border-color: #f39c12;
+}
+section.tiles .thumbnail.new {
+  background: #fad9a3;
+}
+section.tiles .thumbnail.small .name {
+  font-size: 12px;
+}
+section.tiles .thumbnail.smaller .name {
+  font-size: 11px;
+}
+section.tiles .thumbnail .picWrap {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 140px;
+  margin: 10px auto 25px;
+  box-shadow: 0 0 0 3px white;
+  background-size: 140px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section.tiles .thumbnail .picWrap:hover img {
+  display: none;
+}
+section.tiles .thumbnail .picWrap img {
+  width: 140px;
+  min-height: 140px;
+  margin-left: -2px;
+}
+section.tiles .thumbnail .details {
+  opacity: 1;
+  transition: opacity 0.4s, height 0;
+  height: auto;
+  overflow: hidden;
+}
+section.tiles .thumbnail .details.ng-hide {
+  opacity: 0;
+  transition: opacity 0.4s, height 0 0.4s;
+  height: 0;
+  display: block !important;
+}
+section.tiles .thumbnail span {
+  font-size: 13px;
+  line-height: 1.5em;
+  display: block;
+}
+section.tiles .thumbnail span.name {
+  font-size: 14px;
+}
+section.tiles .thumbnail span.title {
+  font-size: 12px;
+}
+section.tiles .thumbnail span.divider {
+  height: 10px;
+}
+section.tiles .thumbnail span.extension {
+  display: inline;
+}
+section.tiles .thumbnail span a {
+  color: #2980b9;
+}
 
+/* LIST STYLES */
 section#list {
-  font-size: 14px; }
-  section#list table {
-    width: 100%;
-    border-collapse: collapse; }
-    section#list table thead tr th {
-      background: #2c3e50;
-      color: #ccc;
-      padding: 0 0 10px;
-      text-align: left;
-      cursor: pointer; }
-    section#list table td {
-      padding: 5px 0; }
-    section#list table tr:nth-child(odd) {
-      background: #ededed; }
-  section#list .picWrap {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
-    margin: 0 auto; }
-    section#list .picWrap img {
-      width: 40px; }
+  font-size: 14px;
+}
+section#list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+section#list table thead tr th {
+  background: #2c3e50;
+  color: #ccc;
+  padding: 0 0 10px;
+  text-align: left;
+  cursor: pointer;
+}
+section#list table td {
+  padding: 5px 0;
+}
+section#list table tr:nth-child(odd) {
+  background: #ededed;
+}
+section#list .picWrap {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+section#list .picWrap img {
+  width: 40px;
+}
 
+/* MEDIA QUERY BREAKPOINTS */
 @media (max-width: 730px) {
   header {
     overflow: auto;
-    padding: 10px; }
-    header h1 {
-      text-align: center;
-      line-height: 30px; }
-    header button {
-      margin-top: 0; }
-    header input {
-      margin: 10px auto 0;
-      float: none;
-      width: 100%; } }
+    padding: 10px;
+  }
+  header h1 {
+    text-align: center;
+    line-height: 30px;
+  }
+  header button {
+    margin-top: 0;
+  }
+  header input {
+    margin: 10px auto 0;
+    float: none;
+    width: 100%;
+  }
+}
 @media (max-width: 599px) {
   section .thumbnail {
-    width: 200px; }
-    section .thumbnail .picWrap {
-      height: 180px; }
-      section .thumbnail .picWrap img {
-        width: 180px; }
+    width: 200px;
+  }
+  section .thumbnail .picWrap {
+    height: 180px;
+  }
+  section .thumbnail .picWrap img {
+    width: 180px;
+  }
 
   section#list {
-    font-size: 14px; }
-    section#list table {
-      width: 100%; }
-      section#list table thead tr th {
-        background: #2c3e50;
-        color: #ccc;
-        padding: 0 5px 10px;
-        text-align: left; }
-      section#list table td {
-        padding: 5px; }
-      section#list table tr:nth-child(odd) {
-        background: #ededed; }
-      section#list table td.pic, section#list table td.title, section#list table td.email, section#list table th.pic, section#list table th.title, section#list table th.email {
-        display: none; } }
+    font-size: 14px;
+  }
+  section#list table {
+    width: 100%;
+  }
+  section#list table thead tr th {
+    background: #2c3e50;
+    color: #ccc;
+    padding: 0 5px 10px;
+    text-align: left;
+  }
+  section#list table td {
+    padding: 5px;
+  }
+  section#list table tr:nth-child(odd) {
+    background: #ededed;
+  }
+  section#list table td.pic, section#list table td.title, section#list table td.email, section#list table th.pic, section#list table th.title, section#list table th.email {
+    display: none;
+  }
+}
 @media (max-width: 464px) {
   .btn.list {
-    display: none; }
+    display: none;
+  }
 
   header button {
     padding: 5px 10px 3px;
-    font-size: 12px; }
+    font-size: 12px;
+  }
 
   section .thumbnail {
-    width: 300px; }
-    section .thumbnail .picWrap {
-      height: 280px; }
-      section .thumbnail .picWrap img {
-        width: 280px; }
+    width: 300px;
+  }
+  section .thumbnail .picWrap {
+    height: 280px;
+  }
+  section .thumbnail .picWrap img {
+    width: 280px;
+  }
 
   section.tiles {
-    padding: 10px 0; }
-    section.tiles .thumbnail {
-      width: 140px;
-      min-height: 172px; }
-      section.tiles .thumbnail:nth-child(6) .name {
-        font-size: 10px; }
-      section.tiles .thumbnail .picWrap {
-        height: 120px;
-        margin: 0 auto 10px; }
-        section.tiles .thumbnail .picWrap img {
-          width: 120px;
-          min-height: 120px; }
-      section.tiles .thumbnail span {
-        font-size: 11px; }
-        section.tiles .thumbnail span.name {
-          font-size: 12px; }
-        section.tiles .thumbnail span.title {
-          font-size: 11px; } }
+    padding: 10px 0;
+  }
+  section.tiles .thumbnail {
+    width: 140px;
+    min-height: 172px;
+  }
+  section.tiles .thumbnail:nth-child(6) .name {
+    font-size: 10px;
+  }
+  section.tiles .thumbnail .picWrap {
+    height: 120px;
+    margin: 0 auto 10px;
+  }
+  section.tiles .thumbnail .picWrap img {
+    width: 120px;
+    min-height: 120px;
+  }
+  section.tiles .thumbnail span {
+    font-size: 11px;
+  }
+  section.tiles .thumbnail span.name {
+    font-size: 12px;
+  }
+  section.tiles .thumbnail span.title {
+    font-size: 11px;
+  }
+}
