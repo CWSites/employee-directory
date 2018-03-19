@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', verdana, sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-size: 62.5%;
@@ -139,16 +139,13 @@ section.tiles .thumbnail .picWrap img {
   margin-left: -2px;
 }
 section.tiles .thumbnail .details {
-  opacity: 1;
-  transition: opacity 0.4s, height 0;
-  height: auto;
-  overflow: hidden;
-}
-section.tiles .thumbnail .details.ng-hide {
-  opacity: 0;
-  transition: opacity 0.4s, height 0 0.4s;
   height: 0;
-  display: block !important;
+  overflow: hidden;
+  display: block;
+  transition: all 0.3s;
+}
+section.tiles .thumbnail.active .details {
+  height: auto;
 }
 section.tiles .thumbnail span {
   font-size: 13px;
@@ -174,6 +171,7 @@ section.tiles .thumbnail span a {
 /* LIST STYLES */
 section.list {
   font-size: 14px;
+  display: none;
 }
 section.list table {
   width: 100%;

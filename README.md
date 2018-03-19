@@ -28,6 +28,7 @@ Barebones React starter files to get up and running with a new project as quickl
 
 * Webpack
 * React v6.3
+* Load random users via https://randomuser.me/ (to-do)
 
 ### Running
 

@@ -28,9 +28,9 @@ class App extends React.Component {
       <div className="app-wrapper">
         <header>
           <h1>Employee Directory</h1>
-          <button class="btn tile">Tile</button>
-          <button class="btn list">List</button>
-          <input type="text" class="filter" placeholder="Type here to filter" />
+          <button className="btn tile">Tile</button>
+          <button className="btn list">List</button>
+          <input type="text" className="filter" placeholder="Type here to filter" />
         </header>
         <section className="tiles">
           <Profile state={this.state} />
