@@ -16,7 +16,7 @@ class Profile extends React.Component {
         <td className="department">{employee[key].department}</td>
         <td className="office">
           <span>{employee[key].office}</span>
-          <span> <sub>x</sub>{employee[key].office_ext}</span>
+          <span> <small>x</small>{employee[key].office_ext}</span>
         </td>
         <td className="mobile"><a href={`tel:${employee[key].mobile}`}>{employee[key].mobile}</a></td>
         <td className="email"><a href={`mailto:${employee[key].email}`}>{employee[key].email}</a></td>

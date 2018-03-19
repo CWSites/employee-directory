@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'; // ES6
+
 
 class Profile extends React.Component {
 
@@ -39,7 +41,7 @@ class Profile extends React.Component {
             <strong>O: </strong>
             <a href="tel:{employee[key].office},{employee[key].office_ext}">
               {employee[key].office}
-              <span className="extension">x{employee[key].office_ext}</span>
+              <small>x</small>{employee[key].office_ext}
             </a>
           </span>
           <span className="mobile">
@@ -53,13 +55,18 @@ class Profile extends React.Component {
     )
   };
 
-
   render() {
     let employees = (this.props.state.employees !== undefined ? this.props.state.employees : []);
 
     return(
       <div>
-        {Object.keys(employees).map(this.renderProfiles)}
+        <ReactCSSTransitionGroup
+          transitionName="profile"
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}>
+
+          {Object.keys(employees).map(this.renderProfiles)}
+        </ReactCSSTransitionGroup>
       </div>
     )
   }

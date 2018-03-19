@@ -1,0 +1,17 @@
+.profile-enter {
+  opacity: 0.01;
+}
+
+.profile-enter.profile-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.profile-leave {
+  opacity: 1;
+}
+
+.profile-leave.profile-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

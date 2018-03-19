@@ -1,3 +1,5 @@
+@import 'animation.css';
+
 html {
   font-family: 'Open Sans', verdana, sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -94,6 +96,10 @@ section.tiles {
   padding: 20px;
   overflow: auto;
   text-align: center;
+  display: none;
+}
+section.tiles.active {
+  display: block;
 }
 section.tiles .thumbnail {
   width: 160px;
@@ -104,6 +110,7 @@ section.tiles .thumbnail {
   margin: 0 5px 10px;
   border: 2px solid #ddd;
   cursor: pointer;
+  transition: 0.3s;
 }
 section.tiles .thumbnail:hover,
 section.tiles .thumbnail:focus {
@@ -140,12 +147,17 @@ section.tiles .thumbnail .picWrap img {
 }
 section.tiles .thumbnail .details {
   height: 0;
+  opacity: 0;
   overflow: hidden;
   display: block;
-  transition: all 0.3s;
+  transition: 0.3s;
+  visibility: hidden;
 }
 section.tiles .thumbnail.active .details {
   height: auto;
+  opacity: 1;
+  transition: 0.3s;
+  visibility: visible;
 }
 section.tiles .thumbnail span {
   font-size: 13px;
@@ -172,6 +184,9 @@ section.tiles .thumbnail span a {
 section.list {
   font-size: 14px;
   display: none;
+}
+section.list.active {
+  display: block;
 }
 section.list table {
   width: 100%;
